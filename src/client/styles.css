@@ -1,0 +1,43 @@
+body {
+  background-color: GhostWhite;
+}
+#main-content {
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-weight: 200;
+}
+.card {
+  margin: 15px;
+  background-color: #FFFFFF;
+  border: 1px solid #DEDEDE;
+}
+.card:hover {
+  cursor: pointer;
+}
+.content {
+  font-size: 14px;
+}
+.description {
+  height: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.title {
+  font-weight: 500;
+}
+ul {
+  height: 50px;
+}
+li {
+  display: inline-flex;
+}
+li:hover {
+  background-color: #EEE
+}
+img.shrink {
+  padding: 0;
+}
+p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
