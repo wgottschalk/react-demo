@@ -1,20 +1,26 @@
 {
   "name": "demos",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "For movies",
+  "main": "./lib/client/index.js",
   "scripts": {
-    "build": "coffee --output lib -cw src",
-    "start": "nodemon ./lib/server/server.js",
+    "preinstall": "coffee --output lib -cw src",
+    "start": "node ./lib/server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "keywords" :[
+    "example",
+    "heroku"
+  ],
+  "author": "William Gottschalk",
   "license": "ISC",
   "dependencies": {
     "cheerio": "^0.20.0",
     "coffee-script": "^1.10.0",
-    "express": "^4.13.4",
     "nodemon": "^1.9.1",
     "request": "^2.69.0"
+  },
+  "engines" : {
+    "node": "5.7.0"
   }
 }
