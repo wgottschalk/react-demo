@@ -9,18 +9,43 @@
 
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.css">
-      
+
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <ul class="row">
-      <li class="small-6 columns align-middle">CompanyName</li>
-      <li class="small-2 columns align-middle"> Nav One</li>
-      <li class="small-2 columns align-middle"> Nav Two</li>
-      <li class="small-2 columns align-middle"> Nav Three</li>
-    </ul>
 
+    <ul class="row">
+      <li class="nav small-6 columns align-middle">CompanyName</li>
+      <li class="nav small-2 columns align-middle"> Nav One</li>
+      <li class="nav small-2 columns align-middle"> Nav Two</li>
+      <li class="nav small-2 columns align-middle"> Nav Three</li>
+    </ul>
+    <div style="display: none;" class="modal">
+      <div class="movie row"></div>
+      <div class="ratings row align-center">
+        <output
+          for="grade"
+          class="column small-12 align-self-bottom"
+          id="slider-output"> C </output>
+
+        <input
+          type="range"
+          class="column small-8 "
+          name="grade"
+          value="6"
+          min="0"
+          max="12">
+
+        <button
+          class="small button secondary hollow small-6"
+          type="button"
+          name="button"
+          id="rating-button">Rate!
+          </button>
+      </div>
+    </div>
     <div id="main-content"></div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
     <script src="index.js"></script>
   </body>
