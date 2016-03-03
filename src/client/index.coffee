@@ -14,13 +14,14 @@ $.ajax
 .fail (err) ->
   console.error err
 
-buildCard = (movie, index) ->
+buildCard = ({title, rating}, index) ->
+  url = process title
   card = $("<div/>").addClass("card row").attr "id", "item-#{index+1}"
-  card.append $("<img src=#{movie.url}/>").addClass "shrink column"
+  card.append $("<img src=#{url}/>").addClass "shrink column"
 
   content = $("<div/>").addClass "column content"
-  content.append $("<p class='title'/>").text movie.title
-  content.append $("<p/>").text "Rating: #{movie.rating or "no rating"}"
+  content.append $("<p class='title'/>").text title
+  content.append $("<p/>").text "Rating: #{rating or "no rating"}"
   content.append $("<p class='description'/>").text sampleText
 
   card.append content
@@ -46,3 +47,12 @@ $('#rating-button').on "click", ->
 document.querySelector 'input'
   .oninput = ->
     $('output').val("#{grades[this.value]}")
+
+process = (url) ->
+  imgSrc = url.toLowerCase()
+    .slice 0, url.indexOf "("
+    .trim()
+    .split " "
+    .join "-"
+  uri = "/images/#{imgSrc}.jpg"
+  return uri

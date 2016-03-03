@@ -70,6 +70,7 @@ output {
 input {
   margin-top: 8px;
   margin-bottom: 20px;
+  height: 44px;
 }
 .modal {
   display: none;
