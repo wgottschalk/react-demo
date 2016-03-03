@@ -1,8 +1,6 @@
 sampleText = "This is an example of a description of a movie. The description should be two to three sentences long. The text should truncate if the descr..."
 grades = ["A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F"]
 
-
-
 $.ajax
   url: "/movies/in-theaters"
   type: "GET"
@@ -28,9 +26,9 @@ buildCard = (movie, index) ->
   card.append content
   $("#main-content").append card
 
-
 generateModal = (html) ->
   $("#rate-title").remove()
+  $("#navi").css "padding-top", "205px"
   title = $('.title', html).text()
   $('.modal')
     .css "display", "block"
@@ -43,6 +41,7 @@ $('#rating-button').on "click", ->
     .css "display", "none"
     .find "#rate-title"
     .remove()
+  $("#navi").css "padding-top", 0
 
 document.querySelector 'input'
   .oninput = ->
