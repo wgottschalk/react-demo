@@ -7,6 +7,7 @@ data = require './data.js'
 
 
 server = http.createServer (req, res) ->
+  console.log req.url
   send res, "#{__dirname}/../../src/client/index.html", "text/html"     if req.url == "/"
   send res, "#{__dirname}/../client/index.js", "application/javascript" if req.url == "/index.js"
   send res, "#{__dirname}/../../src/client/styles.css", "text/css"      if req.url == "/styles.css"
