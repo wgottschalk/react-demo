@@ -4,7 +4,7 @@
   "description": "For movies",
   "main": "./lib/client/index.js",
   "scripts": {
-    "preinstall": "coffee --output lib -cw src",
+    "postinstall": "coffee --output lib -cw src",
     "start": "node ./lib/server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
