@@ -4,7 +4,8 @@
   "description": "For movies",
   "main": "./lib/client/index.js",
   "scripts": {
-    "postinstall": "coffee --output lib -cw src",
+    "preinstall": "coffee --output lib -c src",
+    "build": "coffee --output lib -cw src",
     "start": "node ./lib/server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +22,7 @@
     "request": "^2.69.0"
   },
   "engines" : {
-    "node": "5.7.0"
+    "node": "5.7.0",
+    "npm": "3.7.5"
   }
 }
