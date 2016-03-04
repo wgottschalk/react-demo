@@ -2,7 +2,6 @@ http = require "http"
 fs = require "fs"
 request = require "request"
 cheerio = require "cheerio"
-express = require "express"
 data = require './data.js'
 
 
