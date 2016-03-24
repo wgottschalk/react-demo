@@ -11,7 +11,7 @@ const UserCard = ({name, url, num}) => {
   return (
     <div className="card container-fluid" style={styles.card}>
       <header className="row">
-        <img src={"http://lorempixel.com/50/50/people/" + num} className="col-xs-4" style={styles.img}/>
+        <img src={"https://lorempixel.com/50/50/people/" + num} className="col-xs-4" style={styles.img}/>
         <h4 className="col-xs-8">{name}</h4>
       </header>
       <hr/>

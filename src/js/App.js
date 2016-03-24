@@ -9,7 +9,7 @@ import Promise from 'bluebird'
 
 var mapAndIndex = _.addIndex(_.map)
 var dummyJSON = mapAndIndex( (data, idx) => structureData(data, idx) )(pages);
-var root = 'http://jsonplaceholder.typicode.com';
+var root = 'https://jsonplaceholder.typicode.com';
 // Create class called HelloBox that extends the base React Component class
 
 
